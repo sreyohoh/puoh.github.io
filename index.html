@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="alert('Display OnClick')">click on me</button>
+    <button oncontextmenu="alert('Display OnClick')">Right CLick on me</button>
+    <button onmouseover="alert('Display On Mouse Over')">Mouse Over</button>
+    <button onmouseout="alert('Display On Mouse Out')">Mouse Out</button>
+    <input
+      type="text"
+      onkeydown="alert('Diplay On Keydown')"
+      placeholder="keydown"
+    />
+    <input type="text" onkeyup="alert('Diplay On KeyUp')" placeholder="keyup" />
+    <input
+      type="text"
+      onkeypress="alert('Diplay On KeyPress')"
+      placeholder="keypress"
+    />
+    <input
+      type="text"
+      onfocus="console.log('Diplay On Focus')"
+      placeholder="onfocus"
+    />
+    <input
+      type="text"
+      onblur="alert('Text input loses focus!')"
+      placeholder="On Blur"
+    />
+    <!-- On Change Event -->
+    <select onchange="alert('You have changed the selection!');">
+      <option>Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    <!-- on submit  -->
+    <form
+      action="action.php"
+      method="post"
+      onsubmit="alert('Form data will be submitted to the server!');"
+    >
+      <button type="submit">submit here</button>
+    </form>
+    <!-- onresize -->
+    <p id="result">testing here</p>
+
+    <div id="display"></div>
+
+    <h1>String</h1>
+    <script src="js/loop.js"></script>
+    <script src="js/array.js"></script>
+    <script src="js/switch-cash.js"></script>
+    <script src="js/condition.js"></script>
+    <script src="js/hello.js"></script>
+    <script src="js/string.js"></script>
+  </body>
+</html>
