@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <button onClick="alert('Display OnClick')">click on me</button>
+    <button oncontextmenu="alert('Display OnClick')">Right CLick on me</button>
+    <button onmouseover="alert('Display On Mouse Over')">Mouse Over</button>
+    <button onmouseout="alert('Display On Mouse Out')">Mouse Out</button>
+    <input
+      type="text"
+      onkeydown="alert('Diplay On Keydown')"
+      placeholder="keydown"
+    />
+    <input type="text" onkeyup="alert('Diplay On KeyUp')" placeholder="keyup" />
+    <input
+      type="text"
+      onkeypress="alert('Diplay On KeyPress')"
+      placeholder="keypress"
+    />
+    <input
+      type="text"
+      onfocus="console.log('Diplay On Focus')"
+      placeholder="onfocus"
+    />
+    <input
+      type="text"
+      onblur="alert('Text input loses focus!')"
+      placeholder="On Blur"
+    />
+    <!-- On Change Event -->
+    <select onchange="alert('You have changed the selection!');">
+      <option>Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    <!-- on submit  -->
+    <form
+      action="action.php"
+      method="post"
+      onsubmit="alert('Form data will be submitted to the server!');"
+    >
+      <button type="submit">submit here</button>
+    </form>
+    <!-- onresize -->
+    <p id="result">testing here</p>
+
+    <div id="display"></div>
+
+    <h1>Event Listener</h1>
+    <button id="btn-click"> Please Click me</button>
+
+    <h3>Dom Practice</h3>
+    <div id="bg-yallow">
+     here 
+    </div>
+    <h3>Add New Element</h3>
+    <div id="el">
+
+    </div>
+     <table>
+       <tr>
+        <td>Name</td>
+        <td><input id="name" type="text" name="name"></td>
+       </tr>
+       <tr>
+        <td>Gender</td>
+        <td><select name="gender" id="gender">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select></td>
+        <tr>
+          <td>Bio</td>
+          <td><input id="bio" type="text" name="bio"></td>
+         </tr>
+         <tr>
+          <td></td>
+          <td><button id="btn">Submit</button></td>
+         </tr>
+       </tr>
+     </table>
+
+    <script src="../js/dom.js"></script>
+    <script src="../js/event-listener.js"></script>
+    <script src="../js/try-catch.js"></script>
+    <script src="../js/object.js"></script>
+    <!-- <script src="../js/function.js"></script>
+    <script src="../js/function.js"></script> -->
+  </body>
+</html>
