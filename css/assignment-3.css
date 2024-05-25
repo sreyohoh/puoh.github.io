@@ -39,7 +39,19 @@
 }
 /*Dark Style*/
 body.dark .bg-light{
-    background-color: #000!important;
+    background-color: #121212!important;
 
 
+}
+body.dark .bg-white{
+    background-color: #292929!important;
+}
+body.dark .sidebar .icon{
+    background-color: #bb86fc;
+}
+body.dark .sidebar a{
+color: #ffffff;
+}
+body.dark .nav-link.active{
+background-color: #434445!important;
 }
