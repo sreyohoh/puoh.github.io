@@ -1,3 +1,6 @@
+.sidebar{
+    height: 100vh;
+}
 .sidebar a{
     color: #333;
     display: flex;
@@ -6,8 +9,35 @@
 .sidebar .icon{
     width: 30px;
     height: 30px;
+    border-radius: 4px;
     background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: .5rem;
+}
+.nav-link.active {
+    background-color: #084298;
+    color: #fff;
+    border-radius: 4px;
+}
+.nav-link.active .icon{
+    color: #084298;
+}
+.header{
+    height: 50px;
+}
+.header .form-select-sm{
+    width: 90px;
+    height: 40px;
+}
+.image-profile{
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+/*Dark Style*/
+body.dark .bg-light{
+    background-color: #000!important;
 }
