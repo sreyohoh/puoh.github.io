@@ -11,6 +11,10 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
     <title>Assignment 4</title>
     <style lang="scss">
+        body {
+            background-color: #f8f9fa;
+        }
+
         #header {
             p strong {
                 background-color: #1446a0;
@@ -20,7 +24,9 @@
                 border-radius: 4px;
 
             }
-
+            .navbar-nav .nav-link{
+                padding: .5rem .7rem;
+            }
             .nav-link.active {
                 color: #1446a0;
             }
@@ -41,19 +47,49 @@
             }
 
         }
-        .search-form{
+
+        .search-form {
             width: 300px;
             margin: 0 auto;
-            .form-control{
+
+            .form-control {
 
 
+            }
+        }
+
+        .product {
+            background-color: #ffffff;
+            padding: .5rem;
+            position: relative;
+
+            .favourite {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                color: #ffffff;
+                font-size: 1.2rem;
+            }
+
+            .button-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .more-detail {
+                    width: calc(100% - 50px);
+                }
+
+                .add-cart {
+                    width: 40px;
+                }
             }
         }
     </style>
 </head>
 <body>
 <div id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html"><p class="m-0"><strong>Web</strong> Application Class</p></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -98,16 +134,17 @@
 </div>
 <section>
     <div class="container ">
-        <div class="home-content py-5 text-center">
-            <div class="title"><h2>Hello World</h2></div>
+        <div class="home-content py-5 text-center w-75 mx-auto my-0">
+            <div class="title"><h1>Examples and Tips for Beautiful Ecommerce Website Design</h1></div>
             <div class="description">
-                <p>Here is me</p>
+                <p>When someone visits your ecommerce store or website for the first time, they may not know anything
+                    about your brand, the quality of your products, or your commitment to making customers happy.</p>
             </div>
             <div class="search-form">
                 <div class="input-group ">
                     <input type="text" class="form-control" placeholder="Search" aria-label="Username"
                            aria-describedby="basic-addon1">
-                    <span class="input-group-text" ><i class="bi bi-search"></i></span>
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
                 </div>
             </div>
         </div>
@@ -116,37 +153,99 @@
 <section class="popular-product">
     <div class="container">
         <div class="content-section ">
-           <div class="head-section d-flex justify-content-between align-items-center">
-               <div class="title">
-                   <div>marketplace</div>
-                   <h2>Popular Products</h2>
-               </div>
-               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                   <li class="nav-item" role="presentation">
-                       <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
-                   </li>
-                   <li class="nav-item" role="presentation">
-                       <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Popular</button>
-                   </li>
-                   <li class="nav-item" role="presentation">
-                       <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Frozen</button>
-                   </li>
-                   <li class="nav-item" role="presentation">
-                       <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" >Crunchy</button>
-                   </li>
-               </ul>
+            <div class="head-section d-flex justify-content-between align-items-center pb-4">
+                <div class="title">
+                    <div>marketplace</div>
+                    <h3>Popular Products</h3>
+                </div>
+                <ul class="nav nav-pills " id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">All
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Popular
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                aria-selected="false">Frozen
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                                aria-selected="false">Crunchy
+                        </button>
+                    </li>
+                </ul>
 
 
-           </div>
+            </div>
             <div class="products">
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                        <div class="row">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                         aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="row g-3">
                             <div class="col-md-3">
-                                <div class="product">
-                                    <img src="../../../images/default.jpg" alt="" class="img-fluid">
-                                    <h4 class="title">Product title</h4>
-                                    <div class="des">description here</div>
+                                <div class="product rounded-3">
+                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                    <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                    <div class="favourite"><i class="bi bi-heart"></i></div>
+                                    <div class="price-qty d-flex justify-content-between">
+                                        <div class="price">$11.00</div>
+                                        <div class="qty">4</div>
+                                    </div>
+                                    <div class="button-list">
+                                        <button type="button" class="btn btn-light more-detail">More Details</button>
+                                        <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product rounded-3">
+                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                    <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                    <div class="favourite"><i class="bi bi-heart"></i></div>
+                                    <div class="price-qty d-flex justify-content-between">
+                                        <div class="price">$11.00</div>
+                                        <div class="qty">4</div>
+                                    </div>
+                                    <div class="button-list">
+                                        <button type="button" class="btn btn-light more-detail">More Details</button>
+                                        <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product rounded-3">
+                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                    <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                    <div class="favourite"><i class="bi bi-heart"></i></div>
+                                    <div class="price-qty d-flex justify-content-between">
+                                        <div class="price">$11.00</div>
+                                        <div class="qty">4</div>
+                                    </div>
+                                    <div class="button-list">
+                                        <button type="button" class="btn btn-light more-detail">More Details</button>
+                                        <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product rounded-3">
+                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                    <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                    <div class="favourite"><i class="bi bi-heart"></i></div>
                                     <div class="price-qty d-flex justify-content-between">
                                         <div class="price">$11.00</div>
                                         <div class="qty">4</div>
@@ -159,10 +258,57 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-crunchy" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                         tabindex="0">...
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                         tabindex="0">...
+                    </div>
+                    <div class="tab-pane fade" id="pills-crunchy" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                         tabindex="0">...
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 d-flex align-items-center">
+                <div class="box-content">
+                    <div class="title"><h1>We are the world's biggest electronics online store.</h1></div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit sed eiusmod incididunt labore dolore magna aliqua. Enim minim veniam, quis
+                            nostrud exercitation ullamco laboris aliquip commodo. Lorem ipsum dolor sit sed eiusmod
+                            incididunt labore dolore magna aliqua. Enim minim veniam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 bg-white p-5">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="container">
+        <div class="section-content bg-primary-subtle rounded-5 p-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 p-5">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="box-content">
+                        <div class="title"><h1>We are the world's biggest electronics online store.</h1></div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit sed eiusmod incididunt labore dolore magna aliqua. Enim minim veniam, quis
+                                nostrud exercitation ullamco laboris aliquip commodo. Lorem ipsum dolor sit sed eiusmod
+                                incididunt labore dolore magna aliqua. Enim minim veniam.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
