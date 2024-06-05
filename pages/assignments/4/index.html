@@ -26,6 +26,7 @@
             }
             .navbar-nav .nav-link{
                 padding: .5rem .7rem;
+                font-size: 1.1rem;
             }
             .nav-link.active {
                 color: #1446a0;
@@ -70,6 +71,25 @@
                 color: #ffffff;
                 font-size: 1.2rem;
             }
+            .qty-btn-plus.btn-primary,.qty-btn-minus.btn-primary{
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            .qty-btn-plus{
+                color: #1446a0;
+            }
+            .qty-btn-minus{
+                color: red;
+            }
+            .input-qty{
+                width: 45px;
+                border: none;
+                text-align: center;
+            }
 
             .button-list {
                 display: flex;
@@ -79,11 +99,25 @@
                 .more-detail {
                     width: calc(100% - 50px);
                 }
-
                 .add-cart {
                     width: 40px;
                 }
             }
+            .qty-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &:hover{
+                .btn-light{
+                    background-color: #1446a0;
+                    color: #ffffff;
+                }
+                .favourite{
+                    color: #1446a0;
+                }
+            }
+
         }
     </style>
 </head>
@@ -102,7 +136,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Maketplace</a>
+                        <a class="nav-link" href="./e-marketplace.html">Marketplace</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About Us</a>
@@ -183,6 +217,18 @@
                                 aria-selected="false">Crunchy
                         </button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-left" data-bs-toggle="pill"
+                                data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                                aria-selected="false"><i class="bi bi-chevron-left"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-right" data-bs-toggle="pill"
+                                data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                                aria-selected="false"><i class="bi bi-chevron-right"></i>
+                        </button>
+                    </li>
                 </ul>
 
 
@@ -198,9 +244,13 @@
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
-                                    <div class="price-qty d-flex justify-content-between">
-                                        <div class="price">$11.00</div>
-                                        <div class="qty">4</div>
+                                    <div class="price-qty d-flex justify-content-between py-2">
+                                        <div class="price fs-5 fw-bolder">$11.00</div>
+                                        <div class="qty-container">
+                                            <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                            <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                            <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                        </div>
                                     </div>
                                     <div class="button-list">
                                         <button type="button" class="btn btn-light more-detail">More Details</button>
@@ -214,9 +264,13 @@
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
-                                    <div class="price-qty d-flex justify-content-between">
-                                        <div class="price">$11.00</div>
-                                        <div class="qty">4</div>
+                                    <div class="price-qty d-flex justify-content-between py-2">
+                                        <div class="price fs-5 fw-bolder">$11.00</div>
+                                        <div class="qty-container">
+                                            <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                            <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                            <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                        </div>
                                     </div>
                                     <div class="button-list">
                                         <button type="button" class="btn btn-light more-detail">More Details</button>
@@ -230,9 +284,13 @@
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
-                                    <div class="price-qty d-flex justify-content-between">
-                                        <div class="price">$11.00</div>
-                                        <div class="qty">4</div>
+                                    <div class="price-qty d-flex justify-content-between py-2">
+                                        <div class="price fs-5 fw-bolder">$11.00</div>
+                                        <div class="qty-container">
+                                            <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                            <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                            <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                        </div>
                                     </div>
                                     <div class="button-list">
                                         <button type="button" class="btn btn-light more-detail">More Details</button>
@@ -246,9 +304,13 @@
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
-                                    <div class="price-qty d-flex justify-content-between">
-                                        <div class="price">$11.00</div>
-                                        <div class="qty">4</div>
+                                    <div class="price-qty d-flex justify-content-between py-2">
+                                        <div class="price fs-5 fw-bolder">$11.00</div>
+                                        <div class="qty-container">
+                                            <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                            <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                            <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                        </div>
                                     </div>
                                     <div class="button-list">
                                         <button type="button" class="btn btn-light more-detail">More Details</button>
@@ -314,6 +376,7 @@
     </div>
 </section>
 <script src="../../../js/jquery-3.7.1.min.js"></script>
+<script src="../../../js/assignment-4/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

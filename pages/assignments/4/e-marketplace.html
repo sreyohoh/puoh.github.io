@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../../css/assignment-4.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <title>Assignment 4</title>
+    <style lang="scss">
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #header {
+            p strong {
+                background-color: #1446a0;
+                color: #ffffff;
+                position: relative;
+                padding: .5rem;
+                border-radius: 4px;
+
+            }
+            .navbar-nav .nav-link{
+                padding: .5rem .7rem;
+                font-size: 1.1rem;
+            }
+            .nav-link.active {
+                color: #1446a0;
+            }
+
+            .input-group {
+                border-radius: 20px;
+                overflow: hidden;
+                border: 1px solid #1446a0;
+
+                .form-control {
+                    border: none;
+                }
+
+                .input-group-text {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+
+        }
+
+        .search-form {
+            width: 300px;
+            margin: 0 auto;
+
+            .form-control {
+
+
+            }
+        }
+
+        .product {
+            background-color: #ffffff;
+            padding: .5rem;
+            position: relative;
+
+            .favourite {
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                color: #ffffff;
+                font-size: 1.2rem;
+            }
+            .qty-btn-plus.btn-primary,.qty-btn-minus.btn-primary{
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            .qty-btn-plus{
+                color: #1446a0;
+            }
+            .qty-btn-minus{
+                color: red;
+            }
+            .input-qty{
+                width: 45px;
+                border: none;
+                text-align: center;
+            }
+
+            .button-list {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .more-detail {
+                    width: calc(100% - 50px);
+                }
+                .add-cart {
+                    width: 40px;
+                }
+            }
+            .qty-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &:hover{
+                .btn-light{
+                    background-color: #1446a0;
+                    color: #ffffff;
+                }
+                .favourite{
+                    color: #1446a0;
+                }
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><p class="m-0"><strong>Web</strong> Application Class</p></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./e-marketplace.html">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="input-group ">
+
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                                   aria-describedby="basic-addon1">
+                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-cart2"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<section>
+    <div class="container ">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../../images/1.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../../images/3m.webp" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<section class="product-list py-4">
+    <div class="container">
+        <div class="row ">
+            <div class=" col-md-3">
+                <div class="sidebar">
+                    <div class="title">
+                        <h4>Category</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="title">
+
+                    <h4>Popular Products</h4>
+                </div>
+                <div class="products">
+                    <div class="row g-2">
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <div class="product rounded-3">
+                                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
+                                <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
+                                <div class="favourite"><i class="bi bi-heart"></i></div>
+                                <div class="price-qty d-flex justify-content-between py-2">
+                                    <div class="price fs-5 fw-bolder">$11.00</div>
+                                    <div class="qty-container">
+                                        <button class="qty-btn-minus btn-primary btn-rounded mr-1" type="button"><i class="bi bi-dash-circle"></i></button>
+                                        <input type="text" name="qty" value="1" class="input-qty input-rounded"/>
+                                        <button class="qty-btn-plus btn-primary btn-rounded ml-1" type="button"><i class="bi bi-plus-circle"></i></button>
+                                    </div>
+                                </div>
+                                <div class="button-list">
+                                    <button type="button" class="btn btn-light more-detail">More Details</button>
+                                    <button type="button" class="btn btn-dark"><i class="bi bi-cart2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 d-flex align-items-center">
+                <div class="box-content">
+                    <div class="title"><h1>We are the world's biggest electronics online store.</h1></div>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit sed eiusmod incididunt labore dolore magna aliqua. Enim minim veniam, quis
+                            nostrud exercitation ullamco laboris aliquip commodo. Lorem ipsum dolor sit sed eiusmod
+                            incididunt labore dolore magna aliqua. Enim minim veniam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 bg-white p-5">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="container">
+        <div class="section-content bg-primary-subtle rounded-5 p-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 p-5">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="box-content">
+                        <div class="title"><h1>We are the world's biggest electronics online store.</h1></div>
+                        <div class="description">
+                            <p>Lorem ipsum dolor sit sed eiusmod incididunt labore dolore magna aliqua. Enim minim veniam, quis
+                                nostrud exercitation ullamco laboris aliquip commodo. Lorem ipsum dolor sit sed eiusmod
+                                incididunt labore dolore magna aliqua. Enim minim veniam.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../../../js/jquery-3.7.1.min.js"></script>
+<script src="../../../js/assignment-4/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
