@@ -63,7 +63,13 @@
             background-color: #ffffff;
             padding: .5rem;
             position: relative;
+            .image{
+                overflow: hidden;
+            }
+            img{
+                transition: transform .2s;
 
+            }
             .favourite {
                 position: absolute;
                 right: 15px;
@@ -115,6 +121,9 @@
                 }
                 .favourite{
                     color: #1446a0;
+                }
+                img{
+                    transform: scale(1.1);
                 }
             }
 
@@ -238,9 +247,9 @@
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                          aria-labelledby="pills-home-tab" tabindex="0">
                         <div class="row g-3">
-                            <div class="col-md-3">
+                            <div class="col-xl-3 col-md-6">
                                 <div class="product rounded-3">
-                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <div class="image mb-2 rounded-3"><img src="../../../images/default.jpg" alt="" class="img-fluid  "></div>
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
@@ -258,9 +267,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xl-3 col-md-6">
                                 <div class="product rounded-3">
-                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <div class="image mb-2 rounded-3"><img src="../../../images/default.jpg" alt="" class="img-fluid  "></div>
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
@@ -278,9 +287,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xl-3 col-md-6">
                                 <div class="product rounded-3">
-                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <div class="image mb-2 rounded-3"><img src="../../../images/default.jpg" alt="" class="img-fluid  "></div>
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
@@ -298,9 +307,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xl-3 col-md-6">
                                 <div class="product rounded-3">
-                                    <img src="../../../images/default.jpg" alt="" class="img-fluid rounded-3 mb-2">
+                                    <div class="image mb-2 rounded-3"><img src="../../../images/default.jpg" alt="" class="img-fluid  "></div>
                                     <h5 class=" mb-0 title">Samsung 8kg 5 star </h5>
                                     <div class="des">Vero eos et accusamus et iusto dignissimos ducimus blanditiis</div>
                                     <div class="favourite"><i class="bi bi-heart"></i></div>
